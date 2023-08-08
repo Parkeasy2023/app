@@ -1,0 +1,6 @@
+export { Login as ScreenLogin } from "./LoginUser"
+export { Cadastrar as ScreenCadastrar } from "./Cadastrar"
+export { Perfil as ScreenPerfil } from "./Perfil"
+export { CameraScreen as ScreenCamera } from "./Camera"
+export { LocationScreen as ScreenLocation } from "./Location"
+export { ModoUser as ScreenModo } from "./ModoUser"

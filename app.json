@@ -1,0 +1,58 @@
+{
+  "expo": {
+    "name": "ParkEasy",
+    "slug": "ParkEasy",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptiveicon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Permita $(PRODUCT_NAME) acessar a sua câmera."
+        }
+      ],
+    [
+      "expo-media-library",
+      {
+        "photosPermission": "Allow $(PRODUCT_NAME) to acess your photos.",
+        "savePhotosPermission":"Allow $(PRODUCT_NAME) to save photos",
+        "isAcessMediaLocationEnabled": true
+      }
+    ],
+    [
+      "expo-barcode-scanner",
+      {
+        "cameraPermission":"Permita $(PRODUCT_NAME) acessar a sua câmera."
+      }
+    ],
+          [
+            "expo-location",
+            {
+              "locationAlwaysAndWhenInUsePermission": "Permita que $(PRODUCT_NAME) use sua localização."
+            }
+          ]
+        ]
+      }
+    } 
