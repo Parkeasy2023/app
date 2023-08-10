@@ -10,19 +10,19 @@ export const styles = StyleSheet.create({
       fontSize: 30,
       fontWeight: "bold",
       textAlign: "center",
-      color: colors.secondary
+      color: colors.primary
     },
     formRow: {
         margin: 10,
         flexDirection: "row",
         alignItems: "center",
         borderWidth: 1,
-        borderColor: colors.secondary,
+        borderColor: colors.primary,
         borderRadius: 5
     },
     icon: {
         fontSize: 28,
-        color: colors.secondary,
+        color: colors.primary,
         padding: 5
     },
     input: {

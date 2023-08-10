@@ -43,8 +43,8 @@ export function Login({navigation}: LoginTypes) {
                     onPressI={() => navigation.navigate('Tab')}
                 />
                 <ComponentButtonInterface 
-                    title="Não possui um login? Cadastre-se" 
-                    type="secondary" 
+                    title="Cadastre-se" 
+                    type="primary" 
                     onPressI={() => { navigation.navigate('ModoUser') }} //navigate: Ir para a página de escolher o tipo de usuário
                     />
             </KeyboardAvoidingView>

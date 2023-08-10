@@ -1,5 +1,6 @@
-export { Login as ScreenLogin } from "./LoginUser"
-export { Cadastrar as ScreenCadastrar } from "./Cadastrar"
+export { Login as ScreenLogin } from "./Login"
+export { CadastrarMot as ScreenCadastrarMot } from "./CadastrarMot"
+export { CadastrarEst as ScreenCadastrarEst } from "./CadastrarEst"
 export { Perfil as ScreenPerfil } from "./Perfil"
 export { CameraScreen as ScreenCamera } from "./Camera"
 export { LocationScreen as ScreenLocation } from "./Location"

@@ -8,22 +8,22 @@ export const styles = StyleSheet.create({
         margin: 10
     },
     buttonSecondary: {
-        backgroundColor: colors.secondary,
+        backgroundColor: colors.primary,
         borderRadius: 5,
         margin: 10
     },
     buttonThird: {
-        backgroundColor: colors.third,
+        backgroundColor: colors.primary,
         borderRadius: 5,
         margin: 10
     },
     buttonThirdLight: {
-        backgroundColor: colors.thirdLight,
+        backgroundColor: colors.primary,
         borderRadius: 5,
         margin: 10
     },
     buttonFourth: {
-        backgroundColor: colors.fourth,
+        backgroundColor: colors.primary,
         borderRadius: 5,
         margin: 10
     },
