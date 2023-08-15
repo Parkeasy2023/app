@@ -19,7 +19,7 @@ export function Perfil({navigation}:LoginTypes){
             <Text>Bem vindo á página do seu perfil!</Text>
 
             <TouchableOpacity onPress={() => navigation.navigate('Veiculo')}>
-                <Text>Adicionar Veículo</Text>
+                <Text style={styles.link}>Adicionar Veículo</Text>
             </TouchableOpacity>
 
             <ComponentButtonInterface 

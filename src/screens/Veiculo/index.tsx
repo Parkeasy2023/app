@@ -10,7 +10,7 @@ export function Veiculo({navigation}: LoginTypes) {
     return(
         <View style={styles.container}>
             <KeyboardAvoidingView>
-                <Text style={styles.title}>CADASTRO MOTORISTA</Text>
+                <Text style={styles.title}>CADASTRO VEICULO</Text>
                 <View style={styles.formRow}>
                     <AntDesign name="user" style={styles.icon} />
                     <TextInput
@@ -67,13 +67,8 @@ export function Veiculo({navigation}: LoginTypes) {
                 <ComponentButtonInterface 
                     title="Voltar" 
                     type="primary" 
-                    onPressI={() => { navigation.navigate('Login') }}
+                    onPressI={() => { navigation.navigate('Tab') }}
                 />
-                <ComponentButtonInterface 
-                    title="Faça login" 
-                    type="primary" 
-                    onPressI={() => { navigation.navigate('Login') }} //navigate: Ir para a página de escolher o tipo de usuário
-                    />
                 
             </KeyboardAvoidingView>
         </View>

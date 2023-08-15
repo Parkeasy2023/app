@@ -15,4 +15,7 @@ export const styles = StyleSheet.create({
         borderColor: colors.primary,
         borderRadius: 5
     },
+    link: {
+        color: colors.secondary
+    }
 })
