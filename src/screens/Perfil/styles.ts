@@ -8,14 +8,40 @@ export const styles = StyleSheet.create({
         justifyContent: "center"
     },
     formRow: {
-        margin: 10,
+        margin: 20,
         flexDirection: "row",
-        alignItems: "center",
+        alignItems: "flex-start",
         borderWidth: 1,
-        borderColor: colors.primary,
-        borderRadius: 5
+        borderColor: colors.white,
+        borderRadius: 5,
+        fontSize: 20,
+        marginTop: 30
     },
     link: {
+        color: colors.secondary,
+        marginLeft: 40,
+        fontSize: 20,
+    },
+    title: {
+        fontSize: 30,
+        fontWeight: "bold",
+        textAlign: "center",
+        color: colors.primary
+      },
+      subtitle: {
+        fontSize: 15,
+        textAlign: "center",
         color: colors.secondary
-    }
+      },
+      icon: {
+        fontSize: 28,
+        color: colors.primary,
+        padding: 5
+    },
+      input: {
+        fontSize: 18,
+        padding: 10,
+        width: "70%"
+    },
+    
 })
