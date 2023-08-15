@@ -6,7 +6,7 @@ import { colors } from '../../styles/colors';
 import {ComponentButtonInterface} from '../../components';
 import { LoginTypes } from '../../navigations/login.navigation';
 
-export function CadastrarMot({navigation}: LoginTypes) {
+export function Veiculo({navigation}: LoginTypes) {
     return(
         <View style={styles.container}>
             <KeyboardAvoidingView>

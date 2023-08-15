@@ -112,12 +112,12 @@ export function LocationScreen() {
         >
           {marker && marker.map((i)=>(
             <Marker key={i.latitude} coordinate={i}>
-              <MaterialCommunityIcons name="cellphone-marker" size={48} color={colors.primary} />
+              <MaterialCommunityIcons name="car" size={48} color={colors.primary} />
             </Marker>
          ))}
           {coords && <Polyline
             coordinates={coords}
-            strokeColor={colors.fourth}
+            strokeColor={colors.secondary}
             strokeWidth={7}/>
           }
           {destination && (

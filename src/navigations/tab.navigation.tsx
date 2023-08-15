@@ -1,13 +1,13 @@
 import React from 'react';
 import { BottomTabNavigationProp, createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { ScreenPerfil, ScreenCamera, ScreenLocation } from "../screens";
+import { ScreenPerfil, ScreenCamera, ScreenLocation, ScreenFavoritos, ScreenVoucher } from "../screens";
 import { colors } from "../styles/colors";
-import { Ionicons, Entypo } from '@expo/vector-icons';
+import { Ionicons, Entypo, MaterialIcons } from '@expo/vector-icons';
 
 type TabParamList = {
   Perfil: undefined
-  Camera: undefined
-  Localização: undefined //location
+  Localização: undefined
+  Veiculo: undefined
   //define as telas que aparecerão no tab
 }
 type TabScreenNavigationProp = BottomTabNavigationProp<TabParamList, 'Perfil'>
@@ -20,27 +20,42 @@ export function TabNavigation() {
   return (
     <Tab.Navigator
       screenOptions={{
-        tabBarActiveBackgroundColor: colors.primary,
+        tabBarActiveBackgroundColor: colors.primary, //background da tab
         tabBarActiveTintColor: colors.white,
         headerStyle: {
-          backgroundColor: colors.secondary
+          backgroundColor: colors.primary
         },
         headerTintColor: colors.white
       }}
     >
+      
+      <Tab.Screen name="Home" component={ScreenLocation} //location
+        options={{
+          tabBarIcon: () => (
+            <Entypo name="location" color={colors.white} size={24}/>
+          )
+        }}
+      />
+      <Tab.Screen name="Favoritos" component={ScreenFavoritos}
+        options={{
+          tabBarIcon: () => (
+            <Entypo name="heart" color={colors.white} size={24}/>
+          )
+        }}
+      />
+      <Tab.Screen name="Voucher" component={ScreenVoucher} //CRIAR A SCREENVoucher
+        options={{
+          tabBarIcon: () => (
+            <MaterialIcons name="add-location-alt" color={colors.white} size={24}/>
+          )
+        }}
+      />
       <Tab.Screen name="Perfil" component={ScreenPerfil} 
         options={{
           tabBarIcon: () => (
             <Ionicons name='person' color={colors.white} size={24}/>
           ),
           /*tabBarShowLabel: false -> tira o texto do ícone na tab*/
-        }}
-      />
-      <Tab.Screen name="Localização" component={ScreenLocation} //location
-        options={{
-          tabBarIcon: () => (
-            <Entypo name="location" color="white" size={24}/>
-          )
         }}
       />
     </Tab.Navigator>

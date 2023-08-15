@@ -1,7 +1,7 @@
 import React from 'react';
 import { 
     View, KeyboardAvoidingView, Text,
-    TextInput
+    TextInput, ScrollView
 } from "react-native";
 import {styles} from "./styles";
 import { MaterialIcons, FontAwesome5, AntDesign, Entypo } from '@expo/vector-icons';
@@ -12,7 +12,8 @@ import { LoginTypes } from '../../navigations/login.navigation';
 export function CadastrarEst({navigation}: LoginTypes) {
     return(
         <View style={styles.container}>
-            <KeyboardAvoidingView>
+            <KeyboardAvoidingView>                
+                <ScrollView>
                 <Text style={styles.title}>CADASTRO ESTACIONAMENTO</Text>
                 <View style={styles.formRow}>
                     <FontAwesome5 name="parking" style={styles.icon} />
@@ -43,7 +44,7 @@ export function CadastrarEst({navigation}: LoginTypes) {
                     />
                 </View>
                 <View style={styles.formRow}>
-                    <AntDesign name="question" style={styles.icon} />
+                    <AntDesign name="solution1" style={styles.icon} />
                     <TextInput
                         placeholder="CNPJ"
                         placeholderTextColor={colors.primary}
@@ -80,6 +81,36 @@ export function CadastrarEst({navigation}: LoginTypes) {
                         style={styles.input}
                     />
                 </View>
+                <View style={styles.formRow}>
+                    <FontAwesome5 name="city" style={styles.icon} />
+                    <TextInput
+                        placeholder="Bairro"
+                        placeholderTextColor={colors.primary}
+                        secureTextEntry={true}
+                        autoCapitalize="none"
+                        style={styles.input}
+                    />
+                </View>
+                <View style={styles.formRow}>
+                    <FontAwesome5 name="city" style={styles.icon} />
+                    <TextInput
+                        placeholder="Rua"
+                        placeholderTextColor={colors.primary}
+                        secureTextEntry={true}
+                        autoCapitalize="none"
+                        style={styles.input}
+                    />
+                </View>
+                <View style={styles.formRow}>
+                    <FontAwesome5 name="city" style={styles.icon} />
+                    <TextInput
+                        placeholder="Logradouro"
+                        placeholderTextColor={colors.primary}
+                        secureTextEntry={true}
+                        autoCapitalize="none"
+                        style={styles.input}
+                    />
+                </View>
                 <ComponentButtonInterface 
                     title="Salvar" 
                     type="primary" 
@@ -93,8 +124,9 @@ export function CadastrarEst({navigation}: LoginTypes) {
                 <ComponentButtonInterface 
                     title="Já possuí uma conta? Faça login" 
                     type="secondary" 
-                    onPressI={() => { navigation.navigate('Login') }} //navigate: Ir para a página de escolher o tipo de usuário
+                    onPressI={() => { navigation.navigate('Login') }}
                     />
+                </ScrollView>
                 
             </KeyboardAvoidingView>
         </View>
