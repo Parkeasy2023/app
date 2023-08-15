@@ -10,20 +10,19 @@ export function Veiculo({navigation}: LoginTypes) {
     return(
         <View style={styles.container}>
             <KeyboardAvoidingView>
-                <Text style={styles.title}>CADASTRO VEICULO</Text>
+                <Text style={styles.title}>Cadastrar Veiculo </Text>
+                
                 <View style={styles.formRow}>
-                    <AntDesign name="user" style={styles.icon} />
                     <TextInput
-                        placeholder="Nome Completo"
+                        placeholder="Modelo"
                         placeholderTextColor={colors.primary}
                         autoCapitalize="none"
                         style={styles.input}
                     />
                 </View>
                 <View style={styles.formRow}>
-                    <MaterialIcons name="email" style={styles.icon} />
                     <TextInput
-                        placeholder="Email"
+                        placeholder="Marca"
                         placeholderTextColor={colors.primary}
                         keyboardType="email-address"
                         autoCapitalize="none"
@@ -31,9 +30,8 @@ export function Veiculo({navigation}: LoginTypes) {
                     />
                 </View>
                 <View style={styles.formRow}>
-                    <MaterialIcons name="phone" style={styles.icon} />
                     <TextInput
-                        placeholder="Telefone"
+                        placeholder="Placa"
                         placeholderTextColor={colors.primary}
 
                         autoCapitalize="none"
@@ -41,20 +39,9 @@ export function Veiculo({navigation}: LoginTypes) {
                     />
                 </View>
                 <View style={styles.formRow}>
-                    <AntDesign name="solution1" style={styles.icon} />
                     <TextInput
-                        placeholder="cpf"
+                        placeholder="Cor"
                         placeholderTextColor={colors.primary}
-                        autoCapitalize="none"
-                        style={styles.input}
-                    />
-                </View>
-                <View style={styles.formRow}>
-                    <FontAwesome name="intersex" style={styles.icon} />
-                    <TextInput
-                        placeholder="Sexo"
-                        placeholderTextColor={colors.primary}
-
                         autoCapitalize="none"
                         style={styles.input}
                     />
@@ -66,7 +53,7 @@ export function Veiculo({navigation}: LoginTypes) {
                 />
                 <ComponentButtonInterface 
                     title="Voltar" 
-                    type="primary" 
+                    type="secondary" 
                     onPressI={() => { navigation.navigate('Tab') }}
                 />
                 
