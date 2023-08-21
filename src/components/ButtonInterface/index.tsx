@@ -17,7 +17,15 @@ export function ButtonInterface({ onPressI, title, type, ...rest }: IBInterface)
         } onPress={onPressI} 
             {...rest} 
         >
-            <Text style={styles.text}>{title}</Text>
+            <Text style={
+                type == "primary" ? styles.text:
+                    type == "secondary" ? styles.text:
+                        type == "third" ? styles.text:
+                            type == "fourth" ? styles.text2:
+                    styles.text
+            }
+            >{title}
+            </Text>
         </TouchableOpacity>
     )
 }

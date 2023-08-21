@@ -24,7 +24,6 @@ export const styles = StyleSheet.create({
         margin: 10
     },
     buttonFourth: {
-        color: colors.primary,
         borderColor: colors.primary,
         borderWidth: 2,
         borderRadius: 18,

@@ -66,15 +66,9 @@ export function CadastrarMot({navigation}: LoginTypes) {
                 />
                 <ComponentButtonInterface 
                     title="Voltar" 
-                    type="primary" 
+                    type="fourth" 
                     onPressI={() => { navigation.navigate('Login') }}
                 />
-                <ComponentButtonInterface 
-                    title="Faça login" 
-                    type="primary" 
-                    onPressI={() => { navigation.navigate('Login') }} //navigate: Ir para a página de escolher o tipo de usuário
-                    />
-                
             </KeyboardAvoidingView>
         </View>
     )

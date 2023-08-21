@@ -16,12 +16,12 @@ export function ModoUser({navigation}: LoginTypes) {
             <View>
                 <ComponentButtonInterface 
                     title="Estabelecimento" 
-                    type="primary" 
+                    type="fourth" 
                     onPressI={() => { navigation.navigate('CadastrarEst') }} //Ir para a página de LoginEstacionamento
                 />
                  <ComponentButtonInterface 
                     title="Motorista" 
-                    type="primary" 
+                    type="fourth" 
                     onPressI={() => navigation.navigate('CadastrarMot')} //Ir para a página de LoginMotorista
                 />
             </View>
