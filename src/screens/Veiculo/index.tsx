@@ -10,12 +10,12 @@ export function Veiculo({navigation}: LoginTypes) {
     return(
         <View style={styles.container}>
             <KeyboardAvoidingView>
-                <Text style={styles.title}>Cadastrar Veiculo </Text>
+                <Text style={styles.title}>CADASTAR VEÍCULO </Text>
                 
                 <View style={styles.formRow}>
                     <TextInput
                         placeholder="Modelo"
-                        placeholderTextColor={colors.primary}
+                        placeholderTextColor={colors.secondary}
                         autoCapitalize="none"
                         style={styles.input}
                     />
@@ -23,7 +23,7 @@ export function Veiculo({navigation}: LoginTypes) {
                 <View style={styles.formRow}>
                     <TextInput
                         placeholder="Marca"
-                        placeholderTextColor={colors.primary}
+                        placeholderTextColor={colors.secondary}
                         keyboardType="email-address"
                         autoCapitalize="none"
                         style={styles.input}
@@ -32,7 +32,7 @@ export function Veiculo({navigation}: LoginTypes) {
                 <View style={styles.formRow}>
                     <TextInput
                         placeholder="Placa"
-                        placeholderTextColor={colors.primary}
+                        placeholderTextColor={colors.secondary}
 
                         autoCapitalize="none"
                         style={styles.input}
@@ -41,7 +41,7 @@ export function Veiculo({navigation}: LoginTypes) {
                 <View style={styles.formRow}>
                     <TextInput
                         placeholder="Cor"
-                        placeholderTextColor={colors.primary}
+                        placeholderTextColor={colors.secondary}
                         autoCapitalize="none"
                         style={styles.input}
                     />
@@ -53,7 +53,7 @@ export function Veiculo({navigation}: LoginTypes) {
                 />
                 <ComponentButtonInterface 
                     title="Voltar" 
-                    type="secondary" 
+                    type="fourth" 
                     onPressI={() => { navigation.navigate('Tab') }}
                 />
                 

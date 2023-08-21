@@ -51,8 +51,8 @@ export function Perfil({navigation}:LoginTypes){
                     </TouchableOpacity>
             </View>
             <ComponentButtonInterface 
-                title="Voltar" 
-                type="primary" 
+                title="Sair" 
+                type="fourth" 
                 onPressI= {handleVoltar}         
             />
         </View>

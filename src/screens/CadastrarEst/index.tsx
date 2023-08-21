@@ -14,7 +14,7 @@ export function CadastrarEst({navigation}: LoginTypes) {
         <View style={styles.container}>
             <KeyboardAvoidingView>                
                 <ScrollView>
-                <Text style={styles.title}>CADASTRO ESTACIONAMENTO</Text>
+                <Text style={styles.title}>CADASTRO DE ESTACIONAMENTO</Text>
                 <View style={styles.formRow}>
                     <FontAwesome5 name="parking" style={styles.icon} />
                     <TextInput
@@ -48,6 +48,7 @@ export function CadastrarEst({navigation}: LoginTypes) {
                     <TextInput
                         placeholder="CNPJ"
                         placeholderTextColor={colors.secondary}
+                        keyboardType='numeric'
                         autoCapitalize="none"
                         style={styles.input}
                     />
@@ -57,7 +58,7 @@ export function CadastrarEst({navigation}: LoginTypes) {
                     <TextInput
                         placeholder="Telefone"
                         placeholderTextColor={colors.secondary}
-
+                        keyboardType='phone-pad'
                         autoCapitalize="none"
                         style={styles.input}
                     />
@@ -67,6 +68,7 @@ export function CadastrarEst({navigation}: LoginTypes) {
                     <TextInput
                         placeholder="CEP"
                         placeholderTextColor={colors.secondary}
+                        keyboardType='numeric'
                         autoCapitalize="none"
                         style={styles.input}
                     />
@@ -76,7 +78,6 @@ export function CadastrarEst({navigation}: LoginTypes) {
                     <TextInput
                         placeholder="Cidade"
                         placeholderTextColor={colors.secondary}
-                        secureTextEntry={true}
                         autoCapitalize="none"
                         style={styles.input}
                     />
@@ -86,7 +87,6 @@ export function CadastrarEst({navigation}: LoginTypes) {
                     <TextInput
                         placeholder="Bairro"
                         placeholderTextColor={colors.secondary}
-                        secureTextEntry={true}
                         autoCapitalize="none"
                         style={styles.input}
                     />
@@ -96,7 +96,6 @@ export function CadastrarEst({navigation}: LoginTypes) {
                     <TextInput
                         placeholder="Rua"
                         placeholderTextColor={colors.secondary}
-                        secureTextEntry={true}
                         autoCapitalize="none"
                         style={styles.input}
                     />
@@ -106,7 +105,6 @@ export function CadastrarEst({navigation}: LoginTypes) {
                     <TextInput
                         placeholder="Logradouro"
                         placeholderTextColor={colors.secondary}
-                        secureTextEntry={true}
                         autoCapitalize="none"
                         style={styles.input}
                     />

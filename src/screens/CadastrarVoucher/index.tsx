@@ -21,7 +21,8 @@ export function HomeVoucherScreen({navigation}:TabETypes){
                 <View style={styles.formRow}>
                     <TextInput
                         placeholder="Código*"
-                        placeholderTextColor={colors.primary}
+                        placeholderTextColor={colors.secondary}
+                        keyboardType="numeric"
                         autoCapitalize="none"
                         style={styles.input}
                     />
@@ -29,7 +30,7 @@ export function HomeVoucherScreen({navigation}:TabETypes){
                 <View style={styles.formRow}>
                     <TextInput
                         placeholder="Data*"
-                        placeholderTextColor={colors.primary}
+                        placeholderTextColor={colors.secondary}
                         keyboardType="numeric"
                         autoCapitalize="none"
                         style={styles.input}
@@ -38,7 +39,7 @@ export function HomeVoucherScreen({navigation}:TabETypes){
                 <View style={styles.formRow}>
                     <TextInput
                         placeholder="Horário de início*"
-                        placeholderTextColor={colors.primary}
+                        placeholderTextColor={colors.secondary}
 
                         autoCapitalize="none"
                         style={styles.input}
@@ -47,7 +48,7 @@ export function HomeVoucherScreen({navigation}:TabETypes){
                 <View style={styles.formRow}>
                     <TextInput
                         placeholder="Duração*"
-                        placeholderTextColor={colors.primary}
+                        placeholderTextColor={colors.secondary}
                         autoCapitalize= "none"
                         style={styles.input}
                     />
@@ -55,7 +56,7 @@ export function HomeVoucherScreen({navigation}:TabETypes){
                 <View style={styles.formRow}>
                     <TextInput
                         placeholder="Valor*"
-                        placeholderTextColor={colors.primary}
+                        placeholderTextColor={colors.secondary}
                         autoCapitalize= "none"
                         style={styles.input}
                     />
@@ -63,7 +64,8 @@ export function HomeVoucherScreen({navigation}:TabETypes){
                 <View style={styles.formRow}>
                     <TextInput
                         placeholder="Quantidade*"
-                        placeholderTextColor={colors.primary}
+                        placeholderTextColor={colors.secondary}
+                        keyboardType="numeric"
                         autoCapitalize= "none"
                         style={styles.input}
                     />
