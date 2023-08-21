@@ -114,18 +114,13 @@ export function CadastrarEst({navigation}: LoginTypes) {
                 <ComponentButtonInterface 
                     title="Salvar" 
                     type="primary" 
-                    onPressI={() => {navigation.navigate('HomeVoucher') }} 
+                    onPressI={() => {navigation.navigate('TabE') }} 
                 />
                 <ComponentButtonInterface 
                     title="Voltar" 
-                    type="secondary" 
+                    type="fourth" 
                     onPressI={() => { navigation.navigate('Login') }}
                 />
-                <ComponentButtonInterface 
-                    title="Já possuí uma conta? Faça login" 
-                    type="secondary" 
-                    onPressI={() => { navigation.navigate('Login') }}
-                    />
                 </ScrollView>
                 
             </KeyboardAvoidingView>

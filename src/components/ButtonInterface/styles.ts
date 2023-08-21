@@ -24,10 +24,18 @@ export const styles = StyleSheet.create({
         margin: 10
     },
     buttonFourth: {
+        color: colors.primary,
         borderColor: colors.primary,
         borderWidth: 2,
         borderRadius: 18,
         margin: 10
+    },
+    text: {
+        color: colors.white,
+        fontWeight: "bold",
+        padding: 10,
+        fontSize: 18,
+        textAlign: "center"
     },
     text2: {
         color: colors.primary,
@@ -36,11 +44,4 @@ export const styles = StyleSheet.create({
         fontSize: 18,
         textAlign: "center"
     },
-    text: {
-        color: colors.white,
-        fontWeight: "bold",
-        padding: 10,
-        fontSize: 18,
-        textAlign: "center"
-    }
 })
