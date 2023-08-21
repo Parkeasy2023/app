@@ -2,7 +2,7 @@ import React from 'react';
 import { BottomTabNavigationProp, createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { ScreenPerfil, ScreenCamera, ScreenLocation, ScreenFavoritos, ScreenVoucher } from "../screens";
 import { colors } from "../styles/colors";
-import { Ionicons, Entypo, MaterialIcons } from '@expo/vector-icons';
+import { Ionicons, Entypo, MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
 
 type TabParamList = {
   Perfil: undefined

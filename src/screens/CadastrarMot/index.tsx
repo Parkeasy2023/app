@@ -62,7 +62,7 @@ export function CadastrarMot({navigation}: LoginTypes) {
                 <ComponentButtonInterface 
                     title="Salvar" 
                     type="primary" 
-                    onPressI={() => {navigation.navigate('Tab') }} 
+                    onPressI={() => {navigation.navigate('Tab') }} //Tab: Ir para a página de HomeVoucher
                 />
                 <ComponentButtonInterface 
                     title="Voltar" 

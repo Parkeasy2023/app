@@ -1,6 +1,7 @@
 import React from 'react';
 import { StackNavigationProp, createStackNavigator } from '@react-navigation/stack';
 import { ScreenLogin, ScreenModo, ScreenCadastrarMot, ScreenCadastrarEst, ScreenVeiculo, } from "../screens"
+import { ScreenHomeVoucher } from "../screens"
 import { TabNavigation } from './tab.navigation';
 
 type LoginStackParamList = {
@@ -10,6 +11,7 @@ type LoginStackParamList = {
   Tab: undefined
   ModoUser: undefined
   Veiculo: undefined
+  HomeVoucher: undefined
 }
 type LoginScreenNavigationProp = StackNavigationProp<LoginStackParamList, 'Login'>
 export type LoginTypes = {
@@ -25,6 +27,7 @@ export function LoginNavigation() {
       <Stack.Screen name="Tab" component={TabNavigation} />
       <Stack.Screen name="ModoUser" component={ScreenModo}/>
       <Stack.Screen name="Veiculo" component={ScreenVeiculo}/>
+      <Stack.Screen name="HomeVoucher" component={ScreenHomeVoucher}/>
     </Stack.Navigator>
   );
 }
