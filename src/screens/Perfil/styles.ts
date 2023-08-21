@@ -12,7 +12,7 @@ export const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "flex-start",
         borderWidth: 1,
-        borderColor: colors.white,
+        borderColor: "rgba(0, 0, 0, 0)",
         borderRadius: 5,
         fontSize: 20,
         marginTop: 30
@@ -31,7 +31,7 @@ export const styles = StyleSheet.create({
       subtitle: {
         fontSize: 15,
         textAlign: "center",
-        color: colors.secondary
+        color: colors.black
       },
       icon: {
         fontSize: 28,

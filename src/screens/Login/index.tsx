@@ -44,7 +44,7 @@ export function Login({navigation}: LoginTypes) {
                 />
                 <ComponentButtonInterface 
                     title="Cadastre-se" 
-                    type="primary" 
+                    type="fourth" 
                     onPressI={() => { navigation.navigate('ModoUser') }} //navigate: Ir para a página de escolher o tipo de usuário
                     />
             </KeyboardAvoidingView>

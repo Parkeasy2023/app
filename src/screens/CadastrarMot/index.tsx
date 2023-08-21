@@ -10,11 +10,11 @@ export function CadastrarMot({navigation}: LoginTypes) {
     return(
         <View style={styles.container}>
             <KeyboardAvoidingView>
-                <Text style={styles.title}>CADASTRO MOTORISTA</Text>
+                <Text style={styles.title}>CADASTRO DE MOTORISTA</Text>
                 <View style={styles.formRow}>
                     <AntDesign name="user" style={styles.icon} />
                     <TextInput
-                        placeholder="Nome Completo"
+                        placeholder="Nome Completo*"
                         placeholderTextColor={colors.primary}
                         autoCapitalize="none"
                         style={styles.input}
@@ -23,7 +23,7 @@ export function CadastrarMot({navigation}: LoginTypes) {
                 <View style={styles.formRow}>
                     <MaterialIcons name="email" style={styles.icon} />
                     <TextInput
-                        placeholder="Email"
+                        placeholder="Email*"
                         placeholderTextColor={colors.primary}
                         keyboardType="email-address"
                         autoCapitalize="none"
@@ -33,9 +33,9 @@ export function CadastrarMot({navigation}: LoginTypes) {
                 <View style={styles.formRow}>
                     <MaterialIcons name="phone" style={styles.icon} />
                     <TextInput
-                        placeholder="Telefone"
+                        placeholder="Telefone*"
                         placeholderTextColor={colors.primary}
-
+                        keyboardType='numeric'
                         autoCapitalize="none"
                         style={styles.input}
                     />
@@ -43,7 +43,8 @@ export function CadastrarMot({navigation}: LoginTypes) {
                 <View style={styles.formRow}>
                     <AntDesign name="solution1" style={styles.icon} />
                     <TextInput
-                        placeholder="cpf"
+                        placeholder="CPF*"
+                        keyboardType='numeric'
                         placeholderTextColor={colors.primary}
                         autoCapitalize="none"
                         style={styles.input}
@@ -52,9 +53,8 @@ export function CadastrarMot({navigation}: LoginTypes) {
                 <View style={styles.formRow}>
                     <FontAwesome name="intersex" style={styles.icon} />
                     <TextInput
-                        placeholder="Sexo"
+                        placeholder="Sexo*"
                         placeholderTextColor={colors.primary}
-
                         autoCapitalize="none"
                         style={styles.input}
                     />

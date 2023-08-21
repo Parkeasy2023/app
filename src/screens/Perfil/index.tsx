@@ -16,9 +16,10 @@ export function Perfil({navigation}:LoginTypes){
         tab?.goBack()
     }
     return(
-        <View >
+        <View>
             <Text style={styles.title}>Perfil</Text>
             <Text style={styles.subtitle}>Bem vindo á página do seu perfil!</Text>
+            
             <View style={styles.formRow}>
                     <FontAwesome5 name="user-alt" size={24} color={colors.secondary} />
                     <TouchableOpacity onPress={() => navigation.navigate('Veiculo')}>
@@ -51,7 +52,7 @@ export function Perfil({navigation}:LoginTypes){
             </View>
             <ComponentButtonInterface 
                 title="Voltar" 
-                type="fourth" 
+                type="primary" 
                 onPressI= {handleVoltar}         
             />
         </View>

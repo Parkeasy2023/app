@@ -7,18 +7,18 @@ export const styles = StyleSheet.create({
         justifyContent: "center"
     },
     title: {
-      fontSize: 30,
+      fontSize: 29,
       fontWeight: "bold",
       textAlign: "center",
       color: colors.primary
     },
     formRow: {
+        paddingTop: 2,
         margin: 10,
         flexDirection: "row",
         alignItems: "center",
-        borderWidth: 1,
-        borderColor: colors.primary,
-        borderRadius: 5
+        borderBottomWidth: 1,
+        borderColor: colors.primary
     },
     icon: {
         fontSize: 28,

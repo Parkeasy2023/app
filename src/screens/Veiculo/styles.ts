@@ -16,9 +16,8 @@ export const styles = StyleSheet.create({
         margin: 10,
         flexDirection: "row",
         alignItems: "center",
-        borderWidth: 1,
-        borderColor: colors.primary,
-        borderRadius: 5
+        borderBottomWidth: 1,
+        borderColor: colors.primary
     },
     icon: {
         fontSize: 28,

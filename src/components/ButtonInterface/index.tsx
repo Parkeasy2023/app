@@ -12,7 +12,7 @@ export function ButtonInterface({ onPressI, title, type, ...rest }: IBInterface)
             type == "primary" ? styles.buttonPrimary:
                 type == "secondary" ? styles.buttonSecondary:
                     type == "third" ? styles.buttonThird:
-                        type == "fourth" ? styles.buttonFourth:
+                        type == "fourth" ? styles.buttonFourth: //Botão apenas borda
                         styles.buttonThirdLight
         } onPress={onPressI} 
             {...rest} 

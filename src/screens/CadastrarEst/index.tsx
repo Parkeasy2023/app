@@ -19,7 +19,7 @@ export function CadastrarEst({navigation}: LoginTypes) {
                     <FontAwesome5 name="parking" style={styles.icon} />
                     <TextInput
                         placeholder="Nome fantasia"
-                        placeholderTextColor={colors.primary}
+                        placeholderTextColor={colors.secondary}
                         autoCapitalize="none"
                         style={styles.input}
                     />
@@ -27,8 +27,8 @@ export function CadastrarEst({navigation}: LoginTypes) {
                 <View style={styles.formRow}>
                     <MaterialIcons name="work" style={styles.icon} />
                     <TextInput
-                        placeholder="razão social"
-                        placeholderTextColor={colors.primary}
+                        placeholder="Razão Social"
+                        placeholderTextColor={colors.secondary}
                         autoCapitalize="none"
                         style={styles.input}
                     />
@@ -37,7 +37,7 @@ export function CadastrarEst({navigation}: LoginTypes) {
                     <MaterialIcons name="email" style={styles.icon} />
                     <TextInput
                         placeholder="Email"
-                        placeholderTextColor={colors.primary}
+                        placeholderTextColor={colors.secondary}
                         keyboardType="email-address"
                         autoCapitalize="none"
                         style={styles.input}
@@ -47,7 +47,7 @@ export function CadastrarEst({navigation}: LoginTypes) {
                     <AntDesign name="solution1" style={styles.icon} />
                     <TextInput
                         placeholder="CNPJ"
-                        placeholderTextColor={colors.primary}
+                        placeholderTextColor={colors.secondary}
                         autoCapitalize="none"
                         style={styles.input}
                     />
@@ -56,7 +56,7 @@ export function CadastrarEst({navigation}: LoginTypes) {
                     <MaterialIcons name="phone" style={styles.icon} />
                     <TextInput
                         placeholder="Telefone"
-                        placeholderTextColor={colors.primary}
+                        placeholderTextColor={colors.secondary}
 
                         autoCapitalize="none"
                         style={styles.input}
@@ -66,7 +66,7 @@ export function CadastrarEst({navigation}: LoginTypes) {
                     <Entypo name="location" style={styles.icon} />
                     <TextInput
                         placeholder="CEP"
-                        placeholderTextColor={colors.primary}
+                        placeholderTextColor={colors.secondary}
                         autoCapitalize="none"
                         style={styles.input}
                     />
@@ -75,7 +75,7 @@ export function CadastrarEst({navigation}: LoginTypes) {
                     <FontAwesome5 name="city" style={styles.icon} />
                     <TextInput
                         placeholder="Cidade"
-                        placeholderTextColor={colors.primary}
+                        placeholderTextColor={colors.secondary}
                         secureTextEntry={true}
                         autoCapitalize="none"
                         style={styles.input}
@@ -85,7 +85,7 @@ export function CadastrarEst({navigation}: LoginTypes) {
                     <FontAwesome5 name="city" style={styles.icon} />
                     <TextInput
                         placeholder="Bairro"
-                        placeholderTextColor={colors.primary}
+                        placeholderTextColor={colors.secondary}
                         secureTextEntry={true}
                         autoCapitalize="none"
                         style={styles.input}
@@ -95,7 +95,7 @@ export function CadastrarEst({navigation}: LoginTypes) {
                     <FontAwesome5 name="city" style={styles.icon} />
                     <TextInput
                         placeholder="Rua"
-                        placeholderTextColor={colors.primary}
+                        placeholderTextColor={colors.secondary}
                         secureTextEntry={true}
                         autoCapitalize="none"
                         style={styles.input}
@@ -105,7 +105,7 @@ export function CadastrarEst({navigation}: LoginTypes) {
                     <FontAwesome5 name="city" style={styles.icon} />
                     <TextInput
                         placeholder="Logradouro"
-                        placeholderTextColor={colors.primary}
+                        placeholderTextColor={colors.secondary}
                         secureTextEntry={true}
                         autoCapitalize="none"
                         style={styles.input}
