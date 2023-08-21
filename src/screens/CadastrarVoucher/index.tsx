@@ -71,7 +71,7 @@ export function HomeVoucherScreen({navigation}:TabETypes){
                 <ComponentButtonInterface 
                     title="Salvar" 
                     type="primary" 
-                    onPressI={() => {navigation.navigate('Voucher') }} 
+                    onPressI={() => {navigation.navigate('Home') }} 
                 />
             </KeyboardAvoidingView>
         </View>

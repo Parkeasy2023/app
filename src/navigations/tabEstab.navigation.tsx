@@ -34,7 +34,7 @@ export function TabENavigation() {
           )
         }}
       />
-      <TabE.Screen name="Cadastrar Voucher" component={ScreenHomeVoucher} //location
+      <TabE.Screen name="Voucher" component={ScreenHomeVoucher} //location
         options={{
           tabBarIcon: () => (
             <MaterialIcons name="add-location-alt" color={colors.white} size={24}/>

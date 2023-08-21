@@ -21,11 +21,13 @@ export function TabNavigation() {
     <Tab.Navigator
       screenOptions={{
         tabBarActiveBackgroundColor: colors.primary, //background da tab
-        tabBarActiveTintColor: colors.white,
+        tabBarInactiveBackgroundColor: colors.thirdLight,
+        tabBarActiveTintColor: colors.white, //cor da label da tab selecionada
+        tabBarInactiveTintColor: colors.white, //cor da label da tab não selecionada
         headerStyle: {
           backgroundColor: colors.primary
         },
-        headerTintColor: colors.white
+        headerTintColor: colors.white //titulo de cada página
       }}
     >
       
