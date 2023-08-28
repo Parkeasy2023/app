@@ -40,7 +40,7 @@ export function Login({navigation}: LoginTypes) {
                 <ComponentButtonInterface 
                     title="Entrar" 
                     type="primary" 
-                    onPressI={() => navigation.navigate('Tab')}
+                    onPressI={() => navigation.navigate('Tab')} //arrumar, após a implementação do bnc de dds, para redirecionar de acordo com o CPF( página do motorista) ou CNPJ(página do estacionamento)
                 />
                 <ComponentButtonInterface 
                     title="Cadastre-se" 

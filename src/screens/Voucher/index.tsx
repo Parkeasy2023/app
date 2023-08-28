@@ -10,10 +10,6 @@ import { FontAwesome5, Entypo, MaterialCommunityIcons,Ionicons } from '@expo/vec
 import { colors } from '../../styles/colors';
 
 export function VoucherScreen({navigation}:TabTypes){
-    function handleVoltar(){
-        const tab = navigation.getParent()
-        tab?.goBack()
-    }
     return(
         <View>
             <ScrollView>

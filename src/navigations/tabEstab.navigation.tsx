@@ -1,12 +1,13 @@
 import React from 'react';
 import { BottomTabNavigationProp, createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { ScreenHomeVoucher, ScreenEVoucher } from "../screens";
+import { ScreenHomeVoucher, ScreenEVoucher, ScreenPerfilEst } from "../screens";
 import { colors } from "../styles/colors";
-import { Ionicons, Entypo, MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
+import { Ionicons, MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
 
 type TabEParamList = {
   Home: undefined
   Voucher: undefined
+  PerfilEst: undefined 
   /*Perfil: undefined*/
 }
 type TabEScreenNavigationProp = BottomTabNavigationProp<TabEParamList, 'Home'>
@@ -40,6 +41,13 @@ export function TabENavigation() {
         options={{
           tabBarIcon: () => (
             <MaterialIcons name="add-location-alt" color={colors.white} size={24}/>
+          )
+        }}
+      />
+      <TabE.Screen name="Perfil" component={ScreenPerfilEst} //location
+        options={{
+          tabBarIcon: () => (
+            <Ionicons name='person' color={colors.white} size={24}/>
           )
         }}
       />

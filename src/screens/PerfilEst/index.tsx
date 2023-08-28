@@ -10,7 +10,7 @@ import { FontAwesome5, Entypo,MaterialCommunityIcons,Ionicons } from '@expo/vect
 import { colors } from '../../styles/colors';
 /* ou ../Perfil/styles*/
 
-export function Perfil({navigation}:LoginTypes){
+export function PerfilEst({navigation}:LoginTypes){
     return(
         <View>
             <Text style={styles.title}>Perfil</Text>
