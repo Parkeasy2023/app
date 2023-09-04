@@ -9,7 +9,7 @@ import { LoginTypes } from "../../navigations/login.navigation"
 import { FontAwesome5, Entypo, MaterialCommunityIcons,Ionicons } from '@expo/vector-icons'
 import { colors } from '../../styles/colors';
 
-export function VoucherScreen({navigation}:TabTypes){
+export function HistVoucher({navigation}:TabTypes){
     return(
         <View>
             <ScrollView>

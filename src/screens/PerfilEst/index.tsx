@@ -13,31 +13,23 @@ import { colors } from '../../styles/colors';
 export function PerfilEst({navigation}:LoginTypes){
     return(
         <View>
-            <Text style={styles.title}>Perfil</Text>
-            <Text style={styles.subtitle}>Bem vindo á página do seu perfil!</Text>
-            
+            <Text style={styles.title}>Perfil Estacionamento</Text>
             <View style={styles.formRow}>
                     <FontAwesome5 name="user-alt" size={24} color={colors.secondary} />
-                    <TouchableOpacity onPress={() => navigation.navigate('Veiculo')}>
+                    <TouchableOpacity onPress={() => navigation.navigate('EditarUser')}>
                         <Text style={styles.link}>Editar Perfil</Text>
                     </TouchableOpacity>
             </View>
             <View style={styles.formRow}>
                     <Entypo name="heart" size={24} color={colors.secondary} />
                     <TouchableOpacity onPress={() => navigation.navigate('Veiculo')}>
-                        <Text style={styles.link}>Editar favoritos</Text>
+                        <Text style={styles.link}>Editar Voucher</Text>
                     </TouchableOpacity>
             </View>
             <View style={styles.formRow}>
                     <MaterialCommunityIcons name="bell" size={24} color={colors.secondary} />
                     <TouchableOpacity onPress={() => navigation.navigate('Veiculo')}>
                         <Text style={styles.link}>Notificação</Text>
-                    </TouchableOpacity>
-            </View>
-            <View style={styles.formRow}>
-                    <FontAwesome5 name="car" size={24} color={colors.secondary} />
-                    <TouchableOpacity onPress={() => navigation.navigate('Veiculo')}>
-                        <Text style={styles.link}>Adicionar Veículo</Text>
                     </TouchableOpacity>
             </View>
             <View style={styles.formRow}>

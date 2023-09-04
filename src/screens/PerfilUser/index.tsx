@@ -4,7 +4,7 @@ import { ComponentButtonInterface } from "../../components"
 import { TabTypes } from "../../navigations/tab.navigation"
 import { styles } from "./styles"
 import { TouchableOpacity } from "react-native-gesture-handler"
-import { ScreenPerfil, ScreenVeiculo } from ".."
+import { ScreenPerfil, ScreenVeiculo, ScreenEditarUser } from ".."
 import { LoginTypes } from "../../navigations/login.navigation"
 import { FontAwesome5, Entypo,MaterialCommunityIcons,Ionicons } from '@expo/vector-icons'
 import { colors } from '../../styles/colors';
@@ -18,14 +18,14 @@ export function Perfil({navigation}:LoginTypes){
             
             <View style={styles.formRow}>
                     <FontAwesome5 name="user-alt" size={24} color={colors.secondary} />
-                    <TouchableOpacity onPress={() => navigation.navigate('Veiculo')}>
+                    <TouchableOpacity onPress={() => navigation.navigate('EditarUser')}>
                         <Text style={styles.link}>Editar Perfil</Text>
                     </TouchableOpacity>
             </View>
             <View style={styles.formRow}>
-                    <Entypo name="heart" size={24} color={colors.secondary} />
-                    <TouchableOpacity onPress={() => navigation.navigate('Veiculo')}>
-                        <Text style={styles.link}>Editar favoritos</Text>
+            <MaterialCommunityIcons name="ticket-confirmation-outline" size={24} color={colors.secondary}/>
+                    <TouchableOpacity onPress={() => navigation.navigate('HistVoucher')}>
+                        <Text style={styles.link}>Histórico de Vauchers</Text>
                     </TouchableOpacity>
             </View>
             <View style={styles.formRow}>

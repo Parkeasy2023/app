@@ -23,6 +23,7 @@ export const styles = StyleSheet.create({
         fontSize: 20,
     },
     title: {
+        marginTop: 15,
         fontSize: 30,
         fontWeight: "bold",
         textAlign: "center",

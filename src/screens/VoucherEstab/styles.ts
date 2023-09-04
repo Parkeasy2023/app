@@ -39,6 +39,7 @@ export const styles = StyleSheet.create({
         color: colors.primary
       },
       subtitle: {
+        marginTop:9,
         fontSize: 15,
         textAlign: "center",
         color: colors.black

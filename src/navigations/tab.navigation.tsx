@@ -8,6 +8,8 @@ type TabParamList = {
   Perfil: undefined
   Localização: undefined
   Veiculo: undefined
+  EditarUser: undefined
+  HistVoucher: undefined
   //define as telas que aparecerão no tab
 }
 type TabScreenNavigationProp = BottomTabNavigationProp<TabParamList, 'Perfil'>
