@@ -29,7 +29,7 @@ export function PerfilEst({navigation}:LoginTypes){
             <View style={styles.formRow}>
                     <MaterialCommunityIcons name="bell" size={24} color={colors.secondary} />
                     <TouchableOpacity onPress={() => navigation.navigate('Veiculo')}>
-                        <Text style={styles.link}>Notificação</Text>
+                        <Text style={styles.link}>Notificações</Text>
                     </TouchableOpacity>
             </View>
             <View style={styles.formRow}>

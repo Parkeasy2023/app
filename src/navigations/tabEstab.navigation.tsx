@@ -1,13 +1,14 @@
 import React from 'react';
 import { BottomTabNavigationProp, createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { ScreenHomeVoucher, ScreenEVoucher, ScreenPerfilEst } from "../screens";
+import { ScreenHomeVoucher, ScreenEVoucher, ScreenRecVoucher, ScreenPerfilEst } from "../screens";
 import { colors } from "../styles/colors";
 import { Ionicons, MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
 
 type TabEParamList = {
   Home: undefined
   Voucher: undefined
-  PerfilEst: undefined 
+  PerfilEst: undefined
+  RecVoucher: undefined
   /*Perfil: undefined*/
 }
 type TabEScreenNavigationProp = BottomTabNavigationProp<TabEParamList, 'Home'>
@@ -37,17 +38,24 @@ export function TabENavigation() {
           )
         }}
       />
-      <TabE.Screen name="Voucher" component={ScreenHomeVoucher} //location
+      <TabE.Screen name="Add Voucher" component={ScreenHomeVoucher} //location
         options={{
           tabBarIcon: () => (
-            <MaterialIcons name="add-location-alt" color={colors.white} size={24}/>
+            <MaterialIcons name="add-location-alt" color={colors.white} size={24} />
+          )
+        }}
+      />
+      <TabE.Screen name="Rec Voucher" component={ScreenRecVoucher} //location
+        options={{
+          tabBarIcon: () => (
+            <Ionicons name="checkmark-done-sharp" size={24} color={colors.white} />
           )
         }}
       />
       <TabE.Screen name="Perfil" component={ScreenPerfilEst} //location
         options={{
           tabBarIcon: () => (
-            <Ionicons name='person' color={colors.white} size={24}/>
+            <Ionicons name='person' color={colors.white} size={24} />
           )
         }}
       />

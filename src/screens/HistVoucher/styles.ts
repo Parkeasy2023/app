@@ -8,14 +8,14 @@ export const styles = StyleSheet.create({
         justifyContent: "center"
     },
     formRow: {
-        margin: 20,
+        margin: 10,
         flexDirection: "row",
         alignItems: "flex-start",
         borderWidth: 1,
         borderColor: "rgba(0, 0, 0, 0)",
         borderRadius: 5,
         fontSize: 20,
-        marginTop: 30
+        marginTop: 20
     },
     link: {
         color: colors.secondary,
@@ -29,18 +29,18 @@ export const styles = StyleSheet.create({
     },
     text2 : {
         color: colors.primary,
-        marginLeft: 100,
+        marginLeft: 45,
         fontSize: 12
     },
     title: {
-        marginTop: 15,
+        marginTop: 80,
         fontSize: 30,
         fontWeight: "bold",
         textAlign: "center",
         color: colors.primary
       },
       subtitle: {
-        marginTop: 9,
+        marginTop: 5,
         fontSize: 15,
         textAlign: "center",
         color: colors.black
@@ -54,10 +54,6 @@ export const styles = StyleSheet.create({
         fontSize: 18,
         padding: 10,
         width: "70%"
-    },
-    button:
-    {
-        paddingBottom: 20,
-    },
+    }
     
 })

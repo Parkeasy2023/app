@@ -10,6 +10,7 @@ type TabParamList = {
   Veiculo: undefined
   EditarUser: undefined
   HistVoucher: undefined
+  NotUser: undefined
   //define as telas que aparecerão no tab
 }
 type TabScreenNavigationProp = BottomTabNavigationProp<TabParamList, 'Perfil'>
@@ -47,7 +48,7 @@ export function TabNavigation() {
           )
         }}
       />
-      <Tab.Screen name="Voucher" component={ScreenVoucher} //CRIAR A SCREENVoucher
+      <Tab.Screen name="Voucher" component={ScreenVoucher} //CRIAR A ScreenVoucher
         options={{
           tabBarIcon: () => (
             <MaterialIcons name="add-location-alt" color={colors.white} size={24}/>

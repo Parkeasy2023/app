@@ -1,6 +1,6 @@
 import React from 'react';
 import { StackNavigationProp, createStackNavigator } from '@react-navigation/stack';
-import { ScreenLogin, ScreenModo, ScreenCadastrarMot, ScreenCadastrarEst, ScreenVeiculo, ScreenEditarUser, ScreenHistVoucher, } from "../screens"
+import { ScreenLogin, ScreenModo, ScreenCadastrarMot, ScreenCadastrarEst, ScreenVeiculo, ScreenEditarUser, ScreenHistVoucher, ScreenNotUser, ScreenNotEst, ScreenRecVoucher, } from "../screens"
 import { ScreenHomeVoucher } from "../screens"
 import { TabNavigation } from './tab.navigation';
 import { TabENavigation } from './tabEstab.navigation';
@@ -16,6 +16,9 @@ type LoginStackParamList = {
   HomeVoucher: undefined
   EditarUser: undefined
   HistVoucher: undefined
+  NotUser: undefined
+  NotEst: undefined
+  RecVoucher: undefined
 }
 type LoginScreenNavigationProp = StackNavigationProp<LoginStackParamList, 'Login'>
 export type LoginTypes = {
@@ -35,6 +38,9 @@ export function LoginNavigation() {
       <Stack.Screen name="HomeVoucher" component={ScreenHomeVoucher}/>
       <Stack.Screen name="EditarUser" component={ScreenEditarUser}/>
       <Stack.Screen name="HistVoucher" component={ScreenHistVoucher}/>
+      <Stack.Screen name="NotUser" component={ScreenNotUser}/>
+      <Stack.Screen name="NotEst" component={ScreenNotEst}/>
+      <Stack.Screen name="RecVoucher" component={ScreenRecVoucher}/>
     </Stack.Navigator>
   );
 }
