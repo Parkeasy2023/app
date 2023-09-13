@@ -18,7 +18,7 @@ export function CadastrarEst({navigation}: LoginTypes) {
                 <View style={styles.formRow}>
                     <FontAwesome5 name="parking" style={styles.icon} />
                     <TextInput
-                        placeholder="Nome fantasia"
+                        placeholder="Nome do estabelecimento:"
                         placeholderTextColor={colors.secondary}
                         autoCapitalize="none"
                         style={styles.input}

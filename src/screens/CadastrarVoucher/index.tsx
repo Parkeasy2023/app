@@ -16,7 +16,7 @@ export function HomeVoucherScreen({navigation}:TabETypes){
     return(
         <View style={styles.container}>
             <KeyboardAvoidingView>
-                <Text style={styles.title}>Cadastrar Voucher </Text>
+                <Text style={styles.title}>Cadastrar Voucher</Text>
                 
                 <View style={styles.formRow}>
                     <TextInput

@@ -17,7 +17,7 @@ export function NotUser({ navigation }: TabTypes) {
                 <View style={styles.formRow}>
                     <MaterialCommunityIcons name="ticket-confirmation-outline" size={30} color={colors.secondary} />
                     <TouchableOpacity onPress={() => navigation.navigate('Veiculo')}>
-                        <Text style={styles.link}>Tem valtinho novo hoje!</Text>
+                        <Text style={styles.link}>Tem voucherzinho novo hoje!</Text>
                         <Text style={styles.text}> O estacionamento 1 disponibilizou um vaucher</Text>
                         <Text style={styles.text}> horário: 10:28</Text>
                         <Text style={styles.text2}> detalhes... </Text>
@@ -26,7 +26,7 @@ export function NotUser({ navigation }: TabTypes) {
                 <View style={styles.formRow}>
                     <MaterialCommunityIcons name="ticket-confirmation-outline" size={30} color={colors.secondary} />
                     <TouchableOpacity onPress={() => navigation.navigate('Veiculo')}>
-                        <Text style={styles.link}>Tem valtinho novo hoje!</Text>
+                        <Text style={styles.link}>Tem voucherzinho novo hoje!</Text>
                         <Text style={styles.text}> O estacionamento 3 disponibilizou um vaucher</Text>
                         <Text style={styles.text}> horário: 15:30</Text>
                         <Text style={styles.text2}> detalhes... </Text>

@@ -14,7 +14,7 @@ export function VoucherScreen({ navigation }: TabTypes) {
         <View>
             <ScrollView>
                 <Text style={styles.title}>Vouchers Oferecidos</Text>
-                <Text style={styles.subtitle}>Acesse aqui os vauchr oferecidos hoje!</Text>
+                <Text style={styles.subtitle}>Acesse aqui os vauchers oferecidos hoje!</Text>
 
                 <View style={styles.formRow}>
                     <MaterialCommunityIcons name="ticket-confirmation-outline" size={30} color={colors.secondary} />

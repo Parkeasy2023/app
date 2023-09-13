@@ -10,7 +10,7 @@ export function Veiculo({navigation}: LoginTypes) {
     return(
         <View style={styles.container}>
             <KeyboardAvoidingView>
-                <Text style={styles.title}>CADASTAR VEÍCULO </Text>
+                <Text style={styles.title}>CADASTRAR VEÍCULO </Text>
                 
                 <View style={styles.formRow}>
                     <TextInput
