@@ -35,7 +35,7 @@ export function CadastrarMot({navigation}: LoginTypes) {
                     <TextInput
                         placeholder="Telefone*"
                         placeholderTextColor={colors.primary}
-                        keyboardType='numeric'
+                        keyboardType='number-pad'
                         autoCapitalize="none"
                         style={styles.input}
                     />
@@ -44,7 +44,7 @@ export function CadastrarMot({navigation}: LoginTypes) {
                     <AntDesign name="solution1" style={styles.icon} />
                     <TextInput
                         placeholder="CPF*"
-                        keyboardType='numeric'
+                        keyboardType='number-pad'
                         placeholderTextColor={colors.primary}
                         autoCapitalize="none"
                         style={styles.input}
