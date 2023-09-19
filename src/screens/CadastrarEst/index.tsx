@@ -7,6 +7,7 @@ import {styles} from "./styles";
 import { MaterialIcons, FontAwesome5, AntDesign, Entypo } from '@expo/vector-icons';
 import { colors } from '../../styles/colors';
 import {ComponentButtonInterface} from '../../components';
+import { MaskedTextInput } from "react-native-mask-text";
 import { LoginTypes } from '../../navigations/login.navigation';
 
 export function CadastrarEst({navigation}: LoginTypes) {
@@ -18,8 +19,8 @@ export function CadastrarEst({navigation}: LoginTypes) {
                 <View style={styles.formRow}>
                     <FontAwesome5 name="parking" style={styles.icon} />
                     <TextInput
-                        placeholder="Nome do estabelecimento:"
-                        placeholderTextColor={colors.secondary}
+                        placeholder="Nome do estabelecimento"
+                        placeholderTextColor={colors.primary}
                         autoCapitalize="none"
                         style={styles.input}
                     />
@@ -28,7 +29,7 @@ export function CadastrarEst({navigation}: LoginTypes) {
                     <MaterialIcons name="work" style={styles.icon} />
                     <TextInput
                         placeholder="Razão Social"
-                        placeholderTextColor={colors.secondary}
+                        placeholderTextColor={colors.primary}
                         autoCapitalize="none"
                         style={styles.input}
                     />
@@ -37,7 +38,7 @@ export function CadastrarEst({navigation}: LoginTypes) {
                     <MaterialIcons name="email" style={styles.icon} />
                     <TextInput
                         placeholder="Email"
-                        placeholderTextColor={colors.secondary}
+                        placeholderTextColor={colors.primary}
                         keyboardType="email-address"
                         autoCapitalize="none"
                         style={styles.input}
@@ -45,9 +46,14 @@ export function CadastrarEst({navigation}: LoginTypes) {
                 </View>
                 <View style={styles.formRow}>
                     <AntDesign name="solution1" style={styles.icon} />
-                    <TextInput
-                        placeholder="CNPJ"
-                        placeholderTextColor={colors.secondary}
+                    <MaskedTextInput
+                    mask="99.999.999/9999-99"
+                    onChangeText={(text, rawText) => {
+                      console.log(text);
+                      console.log(rawText);
+                    }}
+                        placeholder="CNPJ*"
+                        placeholderTextColor={colors.primary}
                         keyboardType='numeric'
                         autoCapitalize="none"
                         style={styles.input}
@@ -55,19 +61,29 @@ export function CadastrarEst({navigation}: LoginTypes) {
                 </View>
                 <View style={styles.formRow}>
                     <MaterialIcons name="phone" style={styles.icon} />
-                    <TextInput
-                        placeholder="Telefone"
-                        placeholderTextColor={colors.secondary}
-                        keyboardType='phone-pad'
+                    <MaskedTextInput
+                    mask="(99)99999-9999"
+                    onChangeText={(text, rawText) => {
+                      console.log(text);
+                      console.log(rawText);
+                    }}
+                        placeholder="Telefone*"
+                        placeholderTextColor={colors.primary}
+                        keyboardType='number-pad'
                         autoCapitalize="none"
                         style={styles.input}
                     />
                 </View>
                 <View style={styles.formRow}>
                     <Entypo name="location" style={styles.icon} />
-                    <TextInput
+                    <MaskedTextInput
+                    mask="99999-999"
+                    onChangeText={(text, rawText) => {
+                      console.log(text);
+                      console.log(rawText);
+                    }}
                         placeholder="CEP"
-                        placeholderTextColor={colors.secondary}
+                        placeholderTextColor={colors.primary}
                         keyboardType='numeric'
                         autoCapitalize="none"
                         style={styles.input}
@@ -77,7 +93,7 @@ export function CadastrarEst({navigation}: LoginTypes) {
                     <FontAwesome5 name="city" style={styles.icon} />
                     <TextInput
                         placeholder="Cidade"
-                        placeholderTextColor={colors.secondary}
+                        placeholderTextColor={colors.primary}
                         autoCapitalize="none"
                         style={styles.input}
                     />
@@ -86,16 +102,7 @@ export function CadastrarEst({navigation}: LoginTypes) {
                     <FontAwesome5 name="city" style={styles.icon} />
                     <TextInput
                         placeholder="Bairro"
-                        placeholderTextColor={colors.secondary}
-                        autoCapitalize="none"
-                        style={styles.input}
-                    />
-                </View>
-                <View style={styles.formRow}>
-                    <FontAwesome5 name="city" style={styles.icon} />
-                    <TextInput
-                        placeholder="Rua"
-                        placeholderTextColor={colors.secondary}
+                        placeholderTextColor={colors.primary}
                         autoCapitalize="none"
                         style={styles.input}
                     />
@@ -104,7 +111,17 @@ export function CadastrarEst({navigation}: LoginTypes) {
                     <FontAwesome5 name="city" style={styles.icon} />
                     <TextInput
                         placeholder="Logradouro"
-                        placeholderTextColor={colors.secondary}
+                        placeholderTextColor={colors.primary}
+                        autoCapitalize="none"
+                        style={styles.input}
+                    />
+                </View>
+                <View style={styles.formRow}>
+                    <MaterialIcons name="vpn-key" style={styles.icon} />
+                    <TextInput
+                        placeholder="Senha"
+                        placeholderTextColor={colors.primary}
+                        secureTextEntry={true}
                         autoCapitalize="none"
                         style={styles.input}
                     />

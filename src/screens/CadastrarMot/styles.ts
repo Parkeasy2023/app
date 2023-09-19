@@ -18,14 +18,22 @@ export const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
         borderBottomWidth: 1,
-        borderColor: colors.primary
+        borderColor: colors.primary,
+        color: colors.primary
     },
     panel: {
-        marginTop: 2,
-        margin: 7,
+        display: 'flex',
+        flexDirection: "row",
+        justifyContent: 'space-between',
         paddingTop: 2,
+        margin: 10,
         borderBottomWidth: 1,
-        borderColor: colors.primary
+        borderColor: colors.primary,
+        color: colors.primary
+    },
+    select:{
+        width: "90%",
+        color: colors.primary
     },
     icon: {
         fontSize: 28,
