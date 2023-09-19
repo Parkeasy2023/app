@@ -1,13 +1,16 @@
-import React from 'react';
-import {  View, KeyboardAvoidingView, Text, TextInput} from "react-native";
-import {styles} from "./styles";
+import React, { useState } from 'react';
+import { View, KeyboardAvoidingView, Text, TextInput } from "react-native";
+import { styles } from "./styles";
 import { MaterialIcons, FontAwesome5, FontAwesome, AntDesign } from '@expo/vector-icons';
 import { colors } from '../../styles/colors';
-import {ComponentButtonInterface} from '../../components';
+import { Picker } from "@react-native-picker/picker";
+import { IRegister } from "../../services/data/User"
+import { ComponentButtonInterface } from '../../components';
 import { LoginTypes } from '../../navigations/login.navigation';
 
-export function CadastrarMot({navigation}: LoginTypes) {
-    return(
+export function CadastrarMot({ navigation }: LoginTypes) {
+    const [selectedGender, setSelectedGender] = useState<IRegister>();
+    return (
         <View style={styles.container}>
             <KeyboardAvoidingView>
                 <Text style={styles.title}>CADASTRO DE MOTORISTA</Text>
@@ -50,23 +53,28 @@ export function CadastrarMot({navigation}: LoginTypes) {
                         style={styles.input}
                     />
                 </View>
-                <View style={styles.formRow}>
+                <View style={styles.panel}>
                     <FontAwesome name="intersex" style={styles.icon} />
-                    <TextInput
-                        placeholder="Sexo*"
-                        placeholderTextColor={colors.primary}
-                        autoCapitalize="none"
-                        style={styles.input}
-                    />
-                </View>
-                <ComponentButtonInterface 
-                    title="Salvar" 
-                    type="primary" 
-                    onPressI={() => {navigation.navigate('Tab') }} //Tab: Ir para a página de HomeVoucher
+                    <Picker
+                        selectedValue={selectedGender}
+                        onValueChange={(itemValue, itemIndex) =>
+                            setSelectedGender(itemValue)
+                        }
+                        style={styles.formRow}>
+                        <Picker.Item label="Feminino" value="feminino" />
+                        <Picker.Item label="Masculino" value="masculino" />
+                        <Picker.Item label="Prefiro não informar" value="indefinido" />
+                    </Picker> 
+                </View> 
+
+                <ComponentButtonInterface
+                    title="Salvar"
+                    type="primary"
+                    onPressI={() => { navigation.navigate('Tab') }} //Tab: Ir para a página de HomeVoucher
                 />
-                <ComponentButtonInterface 
-                    title="Voltar" 
-                    type="fourth" 
+                <ComponentButtonInterface
+                    title="Voltar"
+                    type="fourth"
                     onPressI={() => { navigation.navigate('Login') }}
                 />
             </KeyboardAvoidingView>

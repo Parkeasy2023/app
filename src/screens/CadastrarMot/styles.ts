@@ -20,6 +20,13 @@ export const styles = StyleSheet.create({
         borderBottomWidth: 1,
         borderColor: colors.primary
     },
+    panel: {
+        marginTop: 2,
+        margin: 7,
+        paddingTop: 2,
+        borderBottomWidth: 1,
+        borderColor: colors.primary
+    },
     icon: {
         fontSize: 28,
         color: colors.primary,
