@@ -18,7 +18,7 @@ export const styles = StyleSheet.create({
         marginTop: 30
     },
     link: {
-        color: colors.secondary,
+        color: colors.primary,
         marginLeft: 40,
         fontSize: 20,
     },

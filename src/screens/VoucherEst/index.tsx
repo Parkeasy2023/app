@@ -17,9 +17,7 @@ export function VoucherEScreen({navigation}:TabTypes){
     return(
         <View>
             <ScrollView>
-            <Text style={styles.title}>Voucher Reservados</Text>
-            <Text style={styles.subtitle}>Acesse aqui os vauchers reservados</Text>
-            
+            <Text style={styles.title}>Voucher Reservados</Text>           
             <View style={styles.formRow}>
                 <MaterialCommunityIcons name="ticket-confirmation-outline" size={30} color={colors.secondary} />
                     <TouchableOpacity onPress={() => navigation.navigate('Veiculo')}>

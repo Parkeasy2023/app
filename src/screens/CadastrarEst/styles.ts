@@ -13,6 +13,12 @@ export const styles = StyleSheet.create({
       textAlign: "center",
       color: colors.primary
     },
+    subtitle: {
+        marginTop: 9,
+        fontSize: 15,
+        textAlign: "center",
+        color: colors.secondary
+    },
     formRow: {
         paddingTop: 2,
         margin: 10,

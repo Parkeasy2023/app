@@ -22,7 +22,7 @@ export function Favoritos({navigation}:TabTypes){
             <Text style={styles.subtitle}>Acesse aqui seus estacionamentos favoritos!</Text>
             
             <View style={styles.formRow}>
-                <Feather name="heart" size={26} color={colors.secondary} />
+                <Feather name="heart" size={26} color={colors.primary} />
                     <TouchableOpacity onPress={() => navigation.navigate('Veiculo')}>
                         <Text style={styles.link}>Estacionamento 1</Text>
                             <Text style={styles.text}> Endereço: Rua das Rosas - 123, Jardim das Flores</Text>
@@ -31,7 +31,7 @@ export function Favoritos({navigation}:TabTypes){
             </View>
 
             <View style={styles.formRow}>
-                <Feather name="heart" size={26} color={colors.secondary} />
+                <Feather name="heart" size={26} color={colors.primary} />
                     <TouchableOpacity onPress={() => navigation.navigate('Veiculo')}>
                         <Text style={styles.link}>Estacionamento 2</Text>
                             <Text style={styles.text}> Endereço: Avenida do Café - 456, Centro</Text>
@@ -40,7 +40,7 @@ export function Favoritos({navigation}:TabTypes){
             </View>
 
             <View style={styles.formRow}>
-                <Feather name="heart" size={26} color={colors.secondary} />
+                <Feather name="heart" size={26} color={colors.primary} />
                     <TouchableOpacity onPress={() => navigation.navigate('Veiculo')}>
                         <Text style={styles.link}>Estacionamento 3</Text>
                             <Text style={styles.text}> Endereço: Praça da Matriz - 789, São Benedito</Text>

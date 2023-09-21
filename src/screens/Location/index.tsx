@@ -8,7 +8,7 @@ import { colors } from '../../styles/colors';
 import { API_GOOGLE } from '@env';
 import { GooglePlaceData, GooglePlaceDetail, GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
 import MapViewDirections, {} from "react-native-maps-directions";
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { FontAwesome5, MaterialCommunityIcons } from '@expo/vector-icons';
 
 type ICoords = {
   latitude: number
@@ -90,57 +90,48 @@ export function LocationScreen() {
   
   return (
     <View style={styles.container}>
-      <GooglePlacesAutocomplete
-        styles={{ container: styles.searchContainer, textInput: styles.searchInput }}
-        placeholder="Destino"
-        fetchDetails={true}
-        GooglePlacesDetailsQuery={{ fields: "geometry"}}
-        enablePoweredByContainer={false}
-        query={{
-          key: API_GOOGLE,
-          language: 'pt-BR'
-        }}
-        onFail={setErrorMsg}
-        onPress={handleDestination}
-      />
-     {region ? (
-        <MapView 
-          ref={mapRef}
-          region={region} 
-          style={styles.map}
-          showsUserLocation={true}
-        >
-          {marker && marker.map((i)=>(
-            <Marker key={i.latitude} coordinate={i}>
-              <MaterialCommunityIcons name="car" size={48} color={colors.primary} />
-            </Marker>
-         ))}
-          {coords && <Polyline
-            coordinates={coords}
-            strokeColor={colors.secondary}
-            strokeWidth={7}/>
-          }
-          {destination && (
-            <MapViewDirections
-              origin={region}
-              destination={destination}
-              apikey={API_GOOGLE}
-              strokeColor={colors.black}
-              strokeWidth={7}
-              lineDashPattern={[0]}
-              onReady={(result) =>{
-                mapRef.current?.fitToCoordinates(result.coordinates, {
-                  edgePadding: {
-                    top: 24,
-                    bottom: 24,
-                    left: 24,
-                    right: 24
-                  }
-                })
-              }}
-            />
-          )}
-        </MapView>
+       {region ? (
+        <>
+          <GooglePlacesAutocomplete
+            styles={{ container: styles.searchContainer, textInput: styles.searchInput }}
+            placeholder="Pesquisar endereço"
+            fetchDetails={true}
+            GooglePlacesDetailsQuery={{ fields: "geometry" }}
+            enablePoweredByContainer={false}
+            query={{
+              key: API_GOOGLE,
+              language: 'pt-BR'
+            }}
+            onFail={setErrorMsg}
+            onPress={handleDestination}
+          />
+          <MapView ref={mapRef} region={region} style={styles.map} showsUserLocation={true}>
+            {marker && marker.map((i) => (
+              <Marker key={i.latitude} coordinate={i}>
+                <FontAwesome5 name="map-marker-alt" size={24} color="red" />
+              </Marker>
+            ))}
+            {destination && (
+              <MapViewDirections
+                origin={region}
+                destination={destination}
+                apikey={API_GOOGLE}
+                strokeColor={colors.primary}
+                strokeWidth={6}
+                onReady={(result) => {
+                  mapRef.current?.fitToCoordinates(result.coordinates, {
+                    edgePadding: {
+                      top: 24,
+                      bottom: 24,
+                      left: 24,
+                      right: 24
+                    }
+                  })
+                }}
+              />
+            )}
+          </MapView>
+        </>
      ) : (
         <Text style={styles.paragraph}>{text}</Text>
      )}

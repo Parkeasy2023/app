@@ -13,7 +13,7 @@ export function NotEst({navigation}:TabTypes){
     return(
         <View>
             <ScrollView>
-            <Text style={styles.title}>Vouchers Oferecidos</Text>
+            <Text style={styles.title}>Notificação</Text>
             <Text style={styles.subtitle}>Acesse aqui os vauchr oferecidos hoje!</Text>
             
             <View style={styles.formRow}>

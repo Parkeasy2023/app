@@ -16,6 +16,7 @@ export function CadastrarMot({ navigation }: LoginTypes) {
         <View style={styles.container}>
             <KeyboardAvoidingView>
                 <Text style={styles.title}>CADASTRO DE MOTORISTA</Text>
+                <Text style={styles.subtitle}>* indica os campos obrigatórios</Text>
                 <View style={styles.formRow}>
                     <AntDesign name="user" style={styles.icon} />
                     <TextInput

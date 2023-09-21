@@ -18,18 +18,18 @@ export const styles = StyleSheet.create({
         marginTop: 30
     },
     link: {
-        color: colors.secondary,
+        color: colors.primary,
         marginLeft: 40,
-        fontSize: 20, 
+        fontSize: 20,
     },
-    text : {
+    text: {
         color: colors.secondary,
         marginLeft: 45,
         fontSize: 14
     },
-    text2 : {
+    text2: {
         color: colors.primary,
-        marginLeft: 100,
+        marginLeft: 45,
         fontSize: 12
     },
     title: {
@@ -38,19 +38,19 @@ export const styles = StyleSheet.create({
         fontWeight: "bold",
         textAlign: "center",
         color: colors.primary
-      },
-      subtitle: {
+    },
+    subtitle: {
         marginTop: 9,
         fontSize: 15,
         textAlign: "center",
         color: colors.black
-      },
-      icon: {
+    },
+    icon: {
         fontSize: 28,
         color: colors.primary,
         padding: 5
     },
-      input: {
+    input: {
         fontSize: 18,
         padding: 10,
         width: "70%"
@@ -59,5 +59,5 @@ export const styles = StyleSheet.create({
     {
         paddingBottom: 20,
     },
-    
+
 })

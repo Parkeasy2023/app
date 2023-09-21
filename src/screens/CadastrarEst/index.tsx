@@ -16,10 +16,11 @@ export function CadastrarEst({navigation}: LoginTypes) {
             <KeyboardAvoidingView>                
                 <ScrollView>
                 <Text style={styles.title}>CADASTRO DE ESTACIONAMENTO</Text>
+                <Text style={styles.subtitle}>* indica os campos obrigatórios</Text>
                 <View style={styles.formRow}>
                     <FontAwesome5 name="parking" style={styles.icon} />
                     <TextInput
-                        placeholder="Nome do estabelecimento"
+                        placeholder="Nome do estabelecimento*"
                         placeholderTextColor={colors.primary}
                         autoCapitalize="none"
                         style={styles.input}
@@ -28,7 +29,7 @@ export function CadastrarEst({navigation}: LoginTypes) {
                 <View style={styles.formRow}>
                     <MaterialIcons name="work" style={styles.icon} />
                     <TextInput
-                        placeholder="Razão Social"
+                        placeholder="Razão Social*"
                         placeholderTextColor={colors.primary}
                         autoCapitalize="none"
                         style={styles.input}
@@ -37,7 +38,7 @@ export function CadastrarEst({navigation}: LoginTypes) {
                 <View style={styles.formRow}>
                     <MaterialIcons name="email" style={styles.icon} />
                     <TextInput
-                        placeholder="Email"
+                        placeholder="Email*"
                         placeholderTextColor={colors.primary}
                         keyboardType="email-address"
                         autoCapitalize="none"
@@ -82,7 +83,7 @@ export function CadastrarEst({navigation}: LoginTypes) {
                       console.log(text);
                       console.log(rawText);
                     }}
-                        placeholder="CEP"
+                        placeholder="CEP*"
                         placeholderTextColor={colors.primary}
                         keyboardType='numeric'
                         autoCapitalize="none"
@@ -92,7 +93,7 @@ export function CadastrarEst({navigation}: LoginTypes) {
                 <View style={styles.formRow}>
                     <FontAwesome5 name="city" style={styles.icon} />
                     <TextInput
-                        placeholder="Cidade"
+                        placeholder="Cidade*"
                         placeholderTextColor={colors.primary}
                         autoCapitalize="none"
                         style={styles.input}
@@ -101,7 +102,7 @@ export function CadastrarEst({navigation}: LoginTypes) {
                 <View style={styles.formRow}>
                     <FontAwesome5 name="city" style={styles.icon} />
                     <TextInput
-                        placeholder="Bairro"
+                        placeholder="Bairro*"
                         placeholderTextColor={colors.primary}
                         autoCapitalize="none"
                         style={styles.input}
@@ -110,7 +111,7 @@ export function CadastrarEst({navigation}: LoginTypes) {
                 <View style={styles.formRow}>
                     <FontAwesome5 name="city" style={styles.icon} />
                     <TextInput
-                        placeholder="Logradouro"
+                        placeholder="Logradouro*"
                         placeholderTextColor={colors.primary}
                         autoCapitalize="none"
                         style={styles.input}
@@ -119,7 +120,7 @@ export function CadastrarEst({navigation}: LoginTypes) {
                 <View style={styles.formRow}>
                     <MaterialIcons name="vpn-key" style={styles.icon} />
                     <TextInput
-                        placeholder="Senha"
+                        placeholder="Senha*"
                         placeholderTextColor={colors.primary}
                         secureTextEntry={true}
                         autoCapitalize="none"
