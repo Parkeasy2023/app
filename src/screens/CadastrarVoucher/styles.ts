@@ -19,6 +19,20 @@ export const styles = StyleSheet.create({
         borderBottomWidth: 1,
         borderColor: colors.primary
     },
+    panel: {
+        display: 'flex',
+        flexDirection: "row",
+        justifyContent: 'space-between',
+        paddingTop: 2,
+        margin: 10,
+        borderBottomWidth: 1,
+        borderColor: colors.primary,
+        color: colors.secondary
+    },
+    select:{
+        width: "90%",
+        color: colors.secondary
+    },
     icon: {
         fontSize: 28,
         color: colors.primary,

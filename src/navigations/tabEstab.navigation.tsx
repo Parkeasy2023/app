@@ -9,6 +9,7 @@ type TabEParamList = {
   Voucher: undefined
   PerfilEst: undefined
   RecVoucher: undefined
+  AddVoucher: undefined
   /*Perfil: undefined*/
 }
 type TabEScreenNavigationProp = BottomTabNavigationProp<TabEParamList, 'Home'>

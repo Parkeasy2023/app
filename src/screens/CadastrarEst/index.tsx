@@ -23,6 +23,7 @@ export function CadastrarEst({navigation}: LoginTypes) {
                         placeholder="Nome do estabelecimento*"
                         placeholderTextColor={colors.primary}
                         autoCapitalize="none"
+                        
                         style={styles.input}
                     />
                 </View>

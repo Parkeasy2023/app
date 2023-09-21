@@ -22,24 +22,14 @@ export const styles = StyleSheet.create({
         marginLeft: 40,
         fontSize: 20,
     },
-    text : {
-        color: colors.secondary,
-        marginLeft: 45,
-        fontSize: 14
-    },
-    text2 : {
-        color: colors.primary,
-        marginLeft: 45,
-        fontSize: 12
-    },
     title: {
+        marginTop: 15,
         fontSize: 30,
         fontWeight: "bold",
         textAlign: "center",
         color: colors.primary
       },
       subtitle: {
-        marginTop:9,
         fontSize: 15,
         textAlign: "center",
         color: colors.black
@@ -53,10 +43,6 @@ export const styles = StyleSheet.create({
         fontSize: 18,
         padding: 10,
         width: "70%"
-    },
-    button:
-    {
-        paddingBottom: 20,
     },
     
 })

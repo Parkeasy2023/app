@@ -17,30 +17,27 @@ export function RecVoucher({ navigation }: TabTypes) {
                 <Text style={styles.subtitle}>Reconheça a reserva de voucher dos seus clientes!</Text>
 
                 <View style={styles.formRow}>
-                    <MaterialCommunityIcons name="ticket-confirmation-outline" size={30} color={colors.secondary} />
+                    <MaterialCommunityIcons name="ticket-confirmation-outline" size={30} color={colors.primary} />
                     <TouchableOpacity onPress={() => navigation.navigate('Veiculo')}>
-                        <Text style={styles.link}>Estacionamento 1</Text>
-                        <Text style={styles.text}> voucher: 23589</Text>
-                        <Text style={styles.text}> horário: 10:28</Text>
-                        <Text style={styles.text2}> detalhes...  </Text>
-                    </TouchableOpacity>
-                    
-                </View>
-
-                <View style={styles.formRow}>
-                    <MaterialCommunityIcons name="ticket-confirmation-outline" size={30} color={colors.secondary} />
-                    <TouchableOpacity onPress={() => navigation.navigate('Veiculo')}>
-                        <Text style={styles.link}>Estacionamento 2</Text>
+                        <Text style={styles.link}>Luísa Scalioni</Text>
                         <Text style={styles.text}> voucher: 23589</Text>
                         <Text style={styles.text}> horário: 10:28</Text>
                         <Text style={styles.text2}> detalhes...  </Text>
                     </TouchableOpacity>
                 </View>
-
                 <View style={styles.formRow}>
-                    <MaterialCommunityIcons name="ticket-confirmation-outline" size={30} color={colors.secondary} />
+                    <MaterialCommunityIcons name="ticket-confirmation-outline" size={30} color={colors.primary} />
                     <TouchableOpacity onPress={() => navigation.navigate('Veiculo')}>
-                        <Text style={styles.link}>Estacionamento 3</Text>
+                        <Text style={styles.link}>Luna Castro </Text>
+                        <Text style={styles.text}> voucher: 23589</Text>
+                        <Text style={styles.text}> horário: 10:28</Text>
+                        <Text style={styles.text2}> detalhes...  </Text>
+                    </TouchableOpacity>
+                </View>
+                <View style={styles.formRow}>
+                    <MaterialCommunityIcons name="ticket-confirmation-outline" size={30} color={colors.primary} />
+                    <TouchableOpacity onPress={() => navigation.navigate('Veiculo')}>
+                        <Text style={styles.link}>Vinícius Mantovani </Text>
                         <Text style={styles.text}> voucher: 23589</Text>
                         <Text style={styles.text}> horário: 10:28</Text>
                         <Text style={styles.text2}> detalhes...  </Text>
@@ -48,9 +45,19 @@ export function RecVoucher({ navigation }: TabTypes) {
                 </View>
 
                 <View style={styles.formRow}>
-                    <MaterialCommunityIcons name="ticket-confirmation-outline" size={30} color={colors.secondary} />
+                    <MaterialCommunityIcons name="ticket-confirmation-outline" size={30} color={colors.primary} />
                     <TouchableOpacity onPress={() => navigation.navigate('Veiculo')}>
-                        <Text style={styles.link}>Estacionamento 4</Text>
+                        <Text style={styles.link}>Yasmin de Souza </Text>
+                        <Text style={styles.text}> voucher: 23589</Text>
+                        <Text style={styles.text}> horário: 10:28</Text>
+                        <Text style={styles.text2}> detalhes...  </Text>
+                    </TouchableOpacity>
+                </View>
+
+                <View style={styles.formRow}>
+                    <MaterialCommunityIcons name="ticket-confirmation-outline" size={30} color={colors.primary} />
+                    <TouchableOpacity onPress={() => navigation.navigate('Veiculo')}>
+                        <Text style={styles.link}>Eduardo Carvalho</Text>
                         <Text style={styles.text}> voucher: 23589</Text>
                         <Text style={styles.text}> horário: 10:28</Text>
                         <Text style={styles.text2}> detalhes...  </Text>

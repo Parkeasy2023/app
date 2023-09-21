@@ -17,9 +17,9 @@ export function VoucherEScreen({navigation}:TabTypes){
     return(
         <View>
             <ScrollView>
-            <Text style={styles.title}>Voucher Reservados</Text>           
+            <Text style={styles.title}>Vouchers Reservados</Text>           
             <View style={styles.formRow}>
-                <MaterialCommunityIcons name="ticket-confirmation-outline" size={30} color={colors.secondary} />
+                <MaterialCommunityIcons name="ticket-confirmation-outline" size={30} color={colors.primary} />
                     <TouchableOpacity onPress={() => navigation.navigate('Veiculo')}>
                             <Text style={styles.link}>ID: 23589 </Text>
                             <Text style={styles.text}> Motorista: João da Silva </Text>
