@@ -1,8 +1,8 @@
 import axios from 'axios'
 
 export const api = axios.create({
-    baseURL: process.env.REACT_APP_URL_API,
+    baseURL: "https://parkeasybd.onrender.com/register",
     headers: {
-        'Content-Type' : 'application/json',
+        'Accept' : 'application/json',
     },
 })

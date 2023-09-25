@@ -1,29 +1,39 @@
 import {api} from "../../api";
 
 export interface IRegister {
+    //dados de cadastro
     name?: string
     email?: string
+    usuario?: string
+    password?: string
+    document?: string
     telefone?: string
     sexo?: string
-    password?: string
+    datanasc?: string
 }
 
 export interface IAuthenticate {
-    email?: string
+    //dados de autenticação
+    document?: string
     password?: string
 }
 
+//respostas das requisições
 export interface IUser {
+    //dados(todos?)
     token: any;
     id: number
     name: string
     email: string
+    usuario?: string
+    document?: string
     telefone: string
-    genero: string
-    aniversario: string
+    sexo?: string
+    datanasc?: string
 }
 
 export interface IUserLogin {
+    //dados
     user: IUser
     token: {
         token: string
@@ -33,10 +43,10 @@ export interface IUserLogin {
 
 class UserData {
     register(data: IRegister){
-        return api.post<IUser>('/register', data)
+        return api.post<IUser>('/register', data) //Dado que será retornado após o cadastro IUser
     }
     login(data: IAuthenticate){
-        return api.post<IUserLogin>('/login', data)
+        return api.post<IUserLogin>('/login', data)//Dado que será retornado após o login IUserLogin
     }
 }
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { StackNavigationProp, createStackNavigator } from '@react-navigation/stack';
-import { ScreenLogin, ScreenModo, ScreenCadastrarMot, ScreenCadastrarEst, ScreenVeiculo, ScreenEditarUser, ScreenHistVoucher, ScreenNotUser, ScreenAddVoucher, ScreenNotEst, ScreenRecVoucher, ScreenAddVoucher, } from "../screens"
+import { ScreenLogin, ScreenModo, ScreenCadastrarMot, ScreenCadastrarEst, ScreenVeiculo, ScreenEditarUser, ScreenHistVoucher, ScreenNotUser, ScreenNotEst, ScreenRecVoucher, ScreenAddVoucher, } from "../screens"
 import { ScreenHomeVoucher } from "../screens"
 import { TabNavigation } from './tab.navigation';
 import { TabENavigation } from './tabEstab.navigation';
