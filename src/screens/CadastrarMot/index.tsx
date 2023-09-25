@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, KeyboardAvoidingView, Text, TextInput, findNodeHandle, Alert} from "react-native";
+import { View, KeyboardAvoidingView, Text, TextInput, findNodeHandle, Alert, ScrollView} from "react-native";
 import { styles } from "./styles";
 import { MaterialIcons, FontAwesome, AntDesign } from '@expo/vector-icons';
 import { colors } from '../../styles/colors';
@@ -28,8 +28,9 @@ export function CadastrarMot({ navigation }: LoginTypes) {
     
     async function handleRegister() {
         try {
+            console.log(data)
             setIsLoading(true)
-            if(data?.name && data.email && data.password) {
+            if(data?.name && data.usuario && data.datanasc && data.email && data.telefone && data.document && data.sexo && data.password) {
                 const response = await apiUser.register(data)
                 Alert.alert(`${response.data.name} Cadastro realizado com sucesso!`)
                 navigation.navigate('Login')
@@ -39,6 +40,7 @@ export function CadastrarMot({ navigation }: LoginTypes) {
         } catch (error) {
             const err = error as AxiosError
             const errData = err.response?.data as IErrorApi
+            console.log(errData)
             let message = ""
             if(errData){
                 for(const iterator of errData.errors) {
@@ -65,6 +67,7 @@ export function CadastrarMot({ navigation }: LoginTypes) {
         <ComponentLoading />
       ) : (
         <View style={styles.container}>
+            <ScrollView>
             <KeyboardAvoidingView>
                 <Text style={styles.title}>CADASTRO DE MOTORISTA</Text>
                 <Text style={styles.subtitle}>*indica os campos obrigatórios</Text>
@@ -79,13 +82,20 @@ export function CadastrarMot({ navigation }: LoginTypes) {
                     />
                 </View>
                 <View style={styles.formRow}>
+                    <AntDesign name="user" style={styles.icon} />
+                    <TextInput
+                        placeholder="Nome de usuário*"
+                        placeholderTextColor={colors.primary}
+                        autoCapitalize="none"
+                        style={styles.input}
+                        onChangeText={(i) => handleChange({ usuario: i })}
+                    />
+                </View>
+                <View style={styles.formRow}>
                     <AntDesign name="calendar" style={styles.icon} />
                     <MaskedTextInput
                     mask="99/99/9999"
-                    onChangeText={(text, rawText) => {
-                      console.log(text);
-                      console.log(rawText);
-                    }}
+                    onChangeText={(i) => handleChange({ datanasc: i })}
                         placeholder="Data de Nascimento*"
                         placeholderTextColor={colors.primary}
                         keyboardType='number-pad'
@@ -108,10 +118,7 @@ export function CadastrarMot({ navigation }: LoginTypes) {
                     <MaterialIcons name="phone" style={styles.icon} />
                     <MaskedTextInput
                     mask="(99)99999-9999"
-                    onChangeText={(text, rawText) => {
-                      console.log(text);
-                      console.log(rawText);
-                    }}
+                    onChangeText={(i) => handleChange({ telefone: i })}
                         placeholder="Telefone*"
                         placeholderTextColor={colors.primary}
                         keyboardType='number-pad'
@@ -123,10 +130,7 @@ export function CadastrarMot({ navigation }: LoginTypes) {
                     <AntDesign name="solution1" style={styles.icon} />
                     <MaskedTextInput
                     mask="999.999.999-99"
-                    onChangeText={(text, rawText) => {
-                      console.log(text);
-                      console.log(rawText);
-                    }}
+                    onChangeText={(i) => handleChange({ document: i })}
                     placeholder="CPF*"
                     placeholderTextColor={colors.primary}
                     keyboardType="numeric"
@@ -139,9 +143,13 @@ export function CadastrarMot({ navigation }: LoginTypes) {
                         <Picker
                             selectedValue={selectedGender}
                             onValueChange={(itemValue, itemIndex) =>
-                                setSelectedGender(itemValue)
+                                {setSelectedGender(itemValue)
+                                //console.log(itemValue)
+                                handleChange({ sexo: String(itemValue) })
+                                }
                             }
                             style={styles.select}>
+                            <Picker.Item label="" value="" />
                             <Picker.Item label="Feminino" value="feminino" />
                             <Picker.Item label="Masculino" value="masculino" />
                             <Picker.Item label="Prefiro não informar" value="indefinido" />
@@ -170,6 +178,7 @@ export function CadastrarMot({ navigation }: LoginTypes) {
                     onPressI={() => { navigation.navigate('Login') }}
                 />
             </KeyboardAvoidingView>
+            </ScrollView>
         </View>
     ) }
     </>
