@@ -3,11 +3,12 @@ import { View, Image, KeyboardAvoidingView, Text, TextInput, Alert } from "react
 import { styles } from "./styles";
 import { AntDesign,MaterialIcons  } from '@expo/vector-icons';
 import { colors } from '../../styles/colors';
-import { ComponentButtonInterface } from '../../components';
+import { ComponentButtonInterface, ComponentLoading } from '../../components';
 import { MaskedTextInput } from "react-native-mask-text";
 import { LoginTypes } from "../../navigations/login.navigation"
 import { AxiosError } from 'axios';
 import { IAuthenticate } from '../../services/data/User';
+import { useAuth } from '../../hooks/auth'
 
 export interface IErrorApi{
     errors: {
@@ -32,14 +33,13 @@ export function Login({navigation}: LoginTypes) {
                 await signIn(data);
             } else {
                 Alert.alert("Preencha todos os campos!");
-                setIsLoading(false);
+                setIsLoading(false)
             }
         } catch(error) {
             const err = error as AxiosError;
             const message = err.response?.data as string
             Alert.alert(message)
             setIsLoading(false);
-        }
     }
     function handleChange(item: IAuthenticate){
         setData({...data, ...item})
@@ -51,6 +51,10 @@ export function Login({navigation}: LoginTypes) {
     },[])
 
     return(
+        <>
+        {isLoading ? (
+            <ComponentLoading />
+        ) : (
         <View style={styles.container}>
             <View style={styles.formRow2} >
                 <Image source={carro} />
@@ -94,9 +98,8 @@ export function Login({navigation}: LoginTypes) {
                     />
             </KeyboardAvoidingView>
         </View>
-    )
-}
+    )}
+    </>
+    );
+}}
 
-function useAuth(): { signIn: any; } {
-    throw new Error('Function not implemented.');
-}

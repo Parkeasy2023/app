@@ -1,3 +1,4 @@
+import React from "react"
 import 'react-native-gesture-handler';
 import { Dispatch, SetStateAction, useState } from 'react';
 
