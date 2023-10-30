@@ -10,9 +10,27 @@ import { colors } from '../../styles/colors';
 import { LoginTypes } from "../../navigations/login.navigation"
 import { Picker } from "@react-native-picker/picker";
 import { IRegister } from "../../services/data/User";
+import { AxiosError } from "axios";
 
 export function HomeVoucherScreen({navigation}:TabETypes){
     const [selectedGender, setSelectedPagamento] = useState<IRegister>();
+    async function handleSubmit() {
+        try {
+            setLoading(true)
+            if (data?.paciente && data.idade && data.diagnostico) {
+                await apiConsultorio.store(data)
+                Alert.alert("Paciente cadastrado")
+                navigation.navigate("Listar")
+            } else {
+                Alert.alert("Preencha todos os campos!")
+            }
+        } catch (error) {
+            const err = error as AxiosError
+            Alert.alert(err.response?.data as string)
+        } finally {
+            setLoading(false)
+        }
+    }
     return(
         <View style={styles.container}>
             <KeyboardAvoidingView>
@@ -115,9 +133,14 @@ export function HomeVoucherScreen({navigation}:TabETypes){
                 <ComponentButtonInterface 
                     title="Salvar" 
                     type="primary" 
+                    onPress={handleSubmit}
                     onPressI={() => {navigation.navigate('Home') }} 
                 />
             </KeyboardAvoidingView>
         </View>
     )
+}
+
+function setLoading(arg0: boolean) {
+    throw new Error("Function not implemented.");
 }
