@@ -37,9 +37,11 @@ export function Login({navigation}: LoginTypes) {
             }
         } catch(error) {
             const err = error as AxiosError;
+            console.log(error)
             const message = err.response?.data as string
             Alert.alert(message)
             setIsLoading(false);
+        }
     }
     function handleChange(item: IAuthenticate){
         setData({...data, ...item})
@@ -101,5 +103,5 @@ export function Login({navigation}: LoginTypes) {
     )}
     </>
     );
-}}
+}
 

@@ -32,7 +32,7 @@ export function CadastrarMot({ navigation }: LoginTypes) {
             setIsLoading(true)
             if(data?.name && data.usuario && data.datanasc && data.email && data.telefone && data.document && data.sexo && data.password) {
                 const response = await apiUser.register(data)
-                Alert.alert(`${response.data.name} Cadastro realizado com sucesso!`)
+                Alert.alert(`${response.data.name} Cadastro realizado! Faça login para continuar`)
                 navigation.navigate('Login')
             } else {
                 Alert.alert("Preencha todos os campos!")

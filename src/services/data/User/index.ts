@@ -46,6 +46,7 @@ class UserData {
         return api.post<IUser>('/register', data) //Dado que será retornado após o cadastro IUser
     }
     login(data: IAuthenticate){
+        console.log(data)
         return api.post<IUserLogin>('/login', data)//Dado que será retornado após o login IUserLogin
     }
 }
